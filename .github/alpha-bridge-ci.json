@@ -1,27 +1,33 @@
 {
   "default_workflow_permissions": "read",
   "definition_blob_sha1": {
-    ".github/workflows/alpha-bridge-ci-probe.yml": "f77ab4ad7b56a3571281506f6969a1e9889e556a",
-    ".github/workflows/alpha-bridge-ci-verify.yml": "95760790304a2bad6d6820ee35e70aafba80f356",
-    ".github/workflows/ci.yml": "63f43f249eb9fae13940ae37632349622b1bd119",
-    ".github/workflows/screenshots.yml": "2f89aa6a77404aa8269b653a6872274e0a4a9413"
+    ".github/workflows/alpha-bridge-ci-consumer.yml": "dd3245f3a2a4027e71859a2e51513d2203429d3f",
+    ".github/workflows/alpha-bridge-ci-probe.yml": "aaccb32547883d4905e9c1e9f5b1907dbeaa9730",
+    ".github/workflows/alpha-bridge-ci-verify.yml": "97dd816b899c13f4586bd83fd63ef410f5cc750c",
+    ".github/workflows/ci.yml": "1157ab1ffaa615af107fee600baf8c247d0ca317",
+    ".github/workflows/crucible-call-alpha-bridge-ci-probe.yml": "0bc7db45c659d81ffd602bbfd39f8bf7d657cecf",
+    ".github/workflows/screenshots.yml": "9365c20a8c4ef6e910342ccb2afe99db58f90ab3"
   },
   "definition_sha256": {
-    ".github/workflows/alpha-bridge-ci-probe.yml": "90f1497e0c8964df7ce687e21d00ea5f4472246fbbdbf3aa21826960efbb18c2",
-    ".github/workflows/alpha-bridge-ci-verify.yml": "4b1ca9d589df4e671637798677985a2baf15c4607d71689df399a109b491e0a2",
-    ".github/workflows/ci.yml": "e35ddd8e2be4f84d33cacc0e4d6bc551aff77f250930d9187555afd4a3b9ad46",
-    ".github/workflows/screenshots.yml": "da166021d60d91f397697e5006c3d0301a241f407b4b11e0a1c1e02cb2a30fe6"
+    ".github/workflows/alpha-bridge-ci-consumer.yml": "701dc471ca557edf1d75e39d83db1a368f1aaf1c9609c4d52cc803ac9901c03d",
+    ".github/workflows/alpha-bridge-ci-probe.yml": "ad96a7443de016087fa573620462807da8562856c36b566614cd747f1e904588",
+    ".github/workflows/alpha-bridge-ci-verify.yml": "25578ca86e98ceeb86fbcb238fdec0731d9d0ffe1580f65aa2e0000f41ff9a56",
+    ".github/workflows/ci.yml": "201bced9f42f1fe579ecf6837151cb40960bf3fd5b31a4553cef538168e67732",
+    ".github/workflows/crucible-call-alpha-bridge-ci-probe.yml": "dfb02ee69a2ce5279d5829f43ffa95d9a86b91e7d04604de461113b36787a7a9",
+    ".github/workflows/screenshots.yml": "7263128389d087e601943bef4c84cc41bc033ea8cc99c3cdaa6e80400adec937"
   },
-  "generator_sha256": "4bbd1a1f9315d134cec261dd0580b504db191355193dfc428c3ca0ac65bb6b74",
+  "generator_sha256": "57bbc5a594aacb9fe71e1c3ebf2678e841494ad1ede64e1a822c3e835b196631",
   "schema": "alpha-bridge/fork-ci",
   "source_branch": "main",
   "source_commit": "5d6e2c88c178b6446ab74729edbe3de576f6036b",
   "source_repository": "pygfx/pygfx",
   "version": 1,
   "workflows": [
+    ".github/workflows/alpha-bridge-ci-consumer.yml",
     ".github/workflows/alpha-bridge-ci-probe.yml",
     ".github/workflows/alpha-bridge-ci-verify.yml",
     ".github/workflows/ci.yml",
+    ".github/workflows/crucible-call-alpha-bridge-ci-probe.yml",
     ".github/workflows/screenshots.yml"
   ]
 }
