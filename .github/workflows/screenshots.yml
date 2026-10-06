@@ -15,7 +15,7 @@ concurrency:
 jobs:
   screenshots:
     name: Regenerate
-    runs-on: ubuntu-latest
+    runs-on: 'ubuntu-latest'
     steps:
     - uses: actions/checkout@v4
       with:
@@ -44,8 +44,8 @@ jobs:
         path: examples/screenshots
     needs:
     - alpha_bridge_inputs
-    if: ${{ (success()) && needs.alpha_bridge_inputs.outputs.changed == 'true' 
-      }}
+    if: |-
+      ${{ (success()) && needs.alpha_bridge_inputs.outputs.changed == 'true' }}
   alpha_bridge_inputs:
     name: CI input check
     runs-on: ubuntu-latest
@@ -71,7 +71,7 @@ jobs:
         AB_REF: ${{ (github.event_name == 'schedule' || github.event_name == 
           'workflow_run') && 'refs/heads/main' || github.ref }}
         AB_WORKFLOW_DIGEST: 
-          1ed04f0e77d659c0db34a0439e3c223b17c48197e187e7eaaaf0f00110ced2ee
+          5d85b0eed7f7a6607a871606c9ba3bbfbed8a53b83ad0304a6a8a979280a800f
         AB_EVENT: ${{ github.event_name }}
         AB_SCHEDULE: ${{ github.event.schedule || '' }}
         AB_VARIABLES: ${{ toJSON(vars) }}

@@ -5,7 +5,7 @@ on:
     branches:
     - main
     tags:
-    - v*.*.*
+    - "v*.*.*"
   pull_request:
     branches:
     - main
@@ -48,8 +48,8 @@ jobs:
 
     needs:
     - alpha_bridge_inputs
-    if: ${{ (success()) && needs.alpha_bridge_inputs.outputs.changed == 'true' 
-      }}
+    if: |-
+      ${{ (success()) && needs.alpha_bridge_inputs.outputs.changed == 'true' }}
   docs-build:
     name: Docs
     timeout-minutes: 10
@@ -79,8 +79,8 @@ jobs:
 
     needs:
     - alpha_bridge_inputs
-    if: ${{ (success()) && needs.alpha_bridge_inputs.outputs.changed == 'true' 
-      }}
+    if: |-
+      ${{ (success()) && needs.alpha_bridge_inputs.outputs.changed == 'true' }}
   test-builds:
     name: ${{ matrix.name }}
     timeout-minutes: 5
@@ -128,8 +128,8 @@ jobs:
 
     needs:
     - alpha_bridge_inputs
-    if: ${{ (success()) && needs.alpha_bridge_inputs.outputs.changed == 'true' 
-      }}
+    if: |-
+      ${{ (success()) && needs.alpha_bridge_inputs.outputs.changed == 'true' }}
   test-pyinstaller-build:
     name: Test pyinstaller
     timeout-minutes: 10
@@ -156,8 +156,8 @@ jobs:
 
     needs:
     - alpha_bridge_inputs
-    if: ${{ (success()) && needs.alpha_bridge_inputs.outputs.changed == 'true' 
-      }}
+    if: |-
+      ${{ (success()) && needs.alpha_bridge_inputs.outputs.changed == 'true' }}
   test-examples-build:
     name: Test examples ${{ matrix.pyversion }}
     timeout-minutes: 10
@@ -205,8 +205,8 @@ jobs:
 
     needs:
     - alpha_bridge_inputs
-    if: ${{ (success()) && needs.alpha_bridge_inputs.outputs.changed == 'true' 
-      }}
+    if: |-
+      ${{ (success()) && needs.alpha_bridge_inputs.outputs.changed == 'true' }}
   release-build:
     name: Build release on ubuntu-latest
     runs-on: ubuntu-latest
@@ -252,8 +252,8 @@ jobs:
 
     needs:
     - alpha_bridge_inputs
-    if: ${{ (success()) && needs.alpha_bridge_inputs.outputs.changed == 'true' 
-      }}
+    if: |-
+      ${{ (success()) && needs.alpha_bridge_inputs.outputs.changed == 'true' }}
   publish:
     name: Publish release to Github and Pypi
     runs-on: ubuntu-latest
@@ -261,9 +261,8 @@ jobs:
     - test-builds
     - release-build
     - alpha_bridge_inputs
-    if: ${{ (success() && startsWith(((github.event_name == 'schedule' || 
-      github.event_name == 'workflow_run') && 'refs/heads/main' || github.ref), 
-      'refs/tags/v')) && needs.alpha_bridge_inputs.outputs.changed == 'true' }}
+    if: |-
+      ${{ (success() && startsWith(((github.event_name == 'schedule' || github.event_name == 'workflow_run') && 'refs/heads/main' || github.ref), 'refs/tags/v')) && needs.alpha_bridge_inputs.outputs.changed == 'true' }}
     environment:
       name: pypi
       url: https://pypi.org/p/pygfx
@@ -319,7 +318,7 @@ jobs:
         AB_REF: ${{ (github.event_name == 'schedule' || github.event_name == 
           'workflow_run') && 'refs/heads/main' || github.ref }}
         AB_WORKFLOW_DIGEST: 
-          2bade04be6084fd5b10e2ad4422cb9d3ef91ef94371c6c099af082927c541ec4
+          08cea295436532d3fe6504dcc34984725653c5cddaf5c2bf5486eb9b2123cd9f
         AB_EVENT: ${{ github.event_name }}
         AB_SCHEDULE: ${{ github.event.schedule || '' }}
         AB_VARIABLES: ${{ toJSON(vars) }}
