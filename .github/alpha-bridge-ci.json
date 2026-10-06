@@ -1,21 +1,25 @@
 {
+  "default_workflow_permissions": "read",
   "definition_blob_sha1": {
-    ".github/workflows/alpha-bridge-ci-verify.yml": "e967624600c97e9308ad7039f50e4e5b3480a77f",
-    ".github/workflows/ci.yml": "160f495eb4c02107105f7c708182eb32b0c9fbfc",
-    ".github/workflows/screenshots.yml": "452d1f2c191d63a1e29b3ee2cecda95c237042d7"
+    ".github/workflows/alpha-bridge-ci-probe.yml": "54863818654b6c3b324f47f927554ca656b0ba72",
+    ".github/workflows/alpha-bridge-ci-verify.yml": "95760790304a2bad6d6820ee35e70aafba80f356",
+    ".github/workflows/ci.yml": "29a049d98436fe47c2b41d785b569b2ce3f7c53f",
+    ".github/workflows/screenshots.yml": "7228065aa8cc133a72ee9a7569f2ebee4f97a50a"
   },
   "definition_sha256": {
-    ".github/workflows/alpha-bridge-ci-verify.yml": "148b49359afdc3ab3ecde8d2957b2c4f4fc171da278ede186b799ac544b662f0",
-    ".github/workflows/ci.yml": "780099ac576043b1192031130a44e33b676206c9747cca5cfa5292a833f6411b",
-    ".github/workflows/screenshots.yml": "1a76228c9ea895b743b7428a8ff05fa5be680ab2912441cb8c460836b2c3943f"
+    ".github/workflows/alpha-bridge-ci-probe.yml": "0637dc006384f188f10c612b30c708f59c9d535a41c4852e3d40cf692635e8a9",
+    ".github/workflows/alpha-bridge-ci-verify.yml": "4b1ca9d589df4e671637798677985a2baf15c4607d71689df399a109b491e0a2",
+    ".github/workflows/ci.yml": "f2fd482c68802efe46c6116b19c169645267aff86950f68d0014b3c0d51c675f",
+    ".github/workflows/screenshots.yml": "391161058927dafa00846eaec31b001011cc6ea5d75a9cdf95c32dc108bb970a"
   },
-  "generator_sha256": "7b3db61baf202e3e7dd48fa25de24a19021fd832011e4b2a2f8fe59420da19d8",
+  "generator_sha256": "5a9faa0e5f7f50db58c87e3b337aa37b202117d9b2f8a1cf999b892b9c2dce77",
   "schema": "alpha-bridge/fork-ci",
   "source_branch": "main",
   "source_commit": "5d6e2c88c178b6446ab74729edbe3de576f6036b",
   "source_repository": "pygfx/pygfx",
   "version": 1,
   "workflows": [
+    ".github/workflows/alpha-bridge-ci-probe.yml",
     ".github/workflows/alpha-bridge-ci-verify.yml",
     ".github/workflows/ci.yml",
     ".github/workflows/screenshots.yml"
